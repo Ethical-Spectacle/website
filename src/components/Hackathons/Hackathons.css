@@ -1,0 +1,146 @@
+.hackathons {
+    background-color: #e6e6e6;
+}
+
+
+
+/* Next Hackathon Section */
+.next-hackathon {
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e6e6;
+    padding: 30px 0px 0px;
+    color: #30383b;
+}
+
+.next-hackathon h1 {
+    font-family: 'DM Serif Text', serif;
+    padding: 10px 0px 0px;
+    margin: 0px 60px;
+    font-size: 30pt;
+}
+
+.next-hackathon h2 {
+    padding: 15px 0px 10px;
+    margin: 0px 60px;
+    font-family: 'DM Serif Text', serif;
+    font-size: 22pt;
+}
+
+.hackathon-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.next-hackathon p {
+    padding: 5px 0px;
+    margin: 0px 60px;
+    font-size: 16pt;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ESlogo {
+    width: 60px; 
+    height: auto;
+}
+
+.AZVClogo {
+    width: 75px; 
+    height: auto;
+}
+
+.logo-separator {
+    margin: 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.apply {
+    background-color: #242424;
+    color: #ff93b1;
+    text-decoration: none;
+    padding: 20px;
+    margin: 25px 250px 40px;
+    font-size: 12pt;
+    font-family: 'DM Serif Text', serif;
+}
+
+.apply:hover {
+    background-color: #ff93b1;
+    color: #242424;
+}
+
+.how-it-works {
+    padding: 0px 0px 20px;
+}
+
+.next-steps {
+    padding: 0px 0px 35px;
+}
+
+.meetupGroupLink {
+    color: #242424; /* Choose a color that fits your design */
+    text-decoration: underline; /* This is typical for links, but adjust as you like */
+    text-decoration-color: #ff93b1;
+}
+
+/* Past Winners Section */
+.hackathon-winners {
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e6e6;
+    padding: 10px 0px 30px;
+    color: #30383b;
+}
+
+.hackathon-winners h1 {
+    padding: 10px 0px 15px;
+    margin: 0px 60px;
+}
+
+.hackathon-winners p {
+    padding: 5px 0px;
+    margin: 0px 60px;
+}
+
+@media (max-width: 610px) {
+    .next-hackathon h1 {
+        font-size: 24pt;
+        margin: 0px 25px;
+    }
+
+    .next-hackathon h2 {
+        font-size: 18pt;
+        margin: 10px 25px;
+    }
+
+    .hackathon-title {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .next-hackathon p {
+        font-size: 12pt;
+        margin: 0px 25px;
+    }
+
+    .apply {
+        margin: 25px 60px 30px;
+        font-size: 12pt;
+        border-radius: 4px;
+    }
+
+    .hackathon-winners h1 {
+        margin: 0px 25px;
+    }
+
+    .hackathon-winners p {
+        margin: 0px 25px;
+    }
+}

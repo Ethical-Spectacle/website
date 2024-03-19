@@ -1,0 +1,105 @@
+.about-us {
+    background-color: #e6e6e6;
+    padding: 0px 0px 30px;
+}
+
+.about-us-intro {
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e6e6;
+    padding: 30px 0px 20px;
+    color: #30383b;
+}
+
+.about-us-intro h1 {
+    padding: 10px 0px 15px;
+    margin: 0px 150px;
+    font-size: 30pt;
+}
+
+.about-us-intro p {
+    padding: 5px 0px;
+    margin: 0px 150px;
+    font-size: 16pt;
+}
+
+.mission-statement,
+.our-team,
+.our-values,
+.get-involved {
+    padding: 20px 0px;
+    margin: 0px 150px;
+    font-size: 16pt;
+}
+
+.mission-statement h2,
+.our-team h2,
+.our-values h2,
+.get-involved h2 {
+    padding: 15px 0px 10px;
+    font-family: 'DM Serif Text', serif;
+    font-size: 22pt;
+    margin: 0px 150px;
+}
+
+.our-values ul {
+    list-style: inside;
+}
+
+.our-values li {
+    margin: 10px 150px;
+}
+
+.get-involved {
+    margin: 0px 150px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.get-involved p {
+    margin: 0px 0px 20px;
+}
+
+.join-us-link {
+    background-color: #242424;
+    color: #ff93b1;
+    text-decoration: none;
+    padding: 20px;
+    margin: 25px 100px;
+    font-size: 12pt;
+    font-family: 'DM Serif Text', serif;
+}
+
+.join-us-link:hover {
+    background-color: #ff93b1;
+    color: #242424;
+}
+
+@media (max-width: 610px) {
+    .about-us-intro h1,
+    .mission-statement h2,
+    .our-team h2,
+    .our-values h2,
+    .get-involved h2,
+    .about-us-intro p,
+    .mission-statement p,
+    .our-team p,
+    .our-values p,
+    .get-involved p,
+    .our-values li {
+        margin: 0px 25px;
+    }
+
+    .mission-statement,
+    .our-team,
+    .our-values,
+    .get-involved {
+        margin: 0px 25px;
+    }
+
+    .join-us-link {
+        margin: 25px 25px;
+        padding: 15px;
+        border-radius: 4px;
+    }
+}
