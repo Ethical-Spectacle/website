@@ -21,7 +21,7 @@ const Hackathons = () => {
           <p>April 5 (5:00pm) - April 7 (7:30pm), 2024</p>
           <p>Location: Tempe, AZ (In Person)</p>
         </div>
-        
+
         <p>We're hosting our first hackathon!! The theme is... drumroll please... Sustainability!</p>
         <p>Support for this pilot event has been overwhelming, so we booked a fancy venue and got ya some prize money.</p>
         <p>1st Place: $1,500</p>
