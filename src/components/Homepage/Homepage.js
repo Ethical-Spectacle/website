@@ -7,6 +7,7 @@ import FadeInParagraph from './animations/FadeInParagraph';
 import AZVClogo from '../../assets/AZVC_Transparent.png';
 import GCNlogo from '../../assets/global_career_network.png';
 import chip from '../../assets/chip.png';
+import conectorlines from '../../assets/conector-lines.png';
 
 const Homepage = () => {
   return (
@@ -34,14 +35,19 @@ const Homepage = () => {
     </section>
 
     <section id="partners" className="partners">
-      <img src={chip} alt="chip" className="chip" style={{ height: '50px', marginBottom: '5px'}} />
-      <h2>Partners</h2>
-      <a href="https://azvc.com/" target="_blank" rel="noopener noreferrer">
-        <img className="AZVCLogo" src={AZVClogo} alt="Arizona Venture Capital" style={{ height: '80px'}} />
-      </a> 
-      <a href="https://www.linkedin.com/company/global-career-network/" target="_blank" rel="noopener noreferrer">
-        <img className="GCNLogo" src={GCNlogo} alt="Global Career Network" style={{ height: '50px', marginBottom: '5px'}} />
-      </a>
+      <div className='chip-title'>
+        <img src={conectorlines} alt='decorative-lines' className='deco-lines'></img>
+        <img src={chip} alt="chip" className="chip"  />
+        <h2>Partners</h2>
+      </div>
+      <div className='partners-logos'>
+        <a href="https://azvc.com/" target="_blank" rel="noopener noreferrer">
+          <img className="AZVCLogo" src={AZVClogo} alt="Arizona Venture Capital" />
+        </a> 
+        <a href="https://www.linkedin.com/company/global-career-network/" target="_blank" rel="noopener noreferrer">
+          <img className="GCNLogo" src={GCNlogo} alt="Global Career Network" />
+        </a>
+      </div>
     </section>
 
     <section id="contact" className="Contact-section">

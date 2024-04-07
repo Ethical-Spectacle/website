@@ -54,8 +54,57 @@
 }
 
 .partners {
-    img .chip {
-        width: 600px;
-        margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    height: 50vh;
+
+    .chip-title {
+        position: relative;
+        width: 100%;
+        margin: 50px;
+
+        .chip, h2, .deco-lines {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .chip {
+            height: 100px;
+        }
+
+        .deco-lines {
+            top: 110px;
+            width: 550px;
+        }
+
+        h2 {
+            background-image: linear-gradient(to right, white, #a6a6a6);
+            color: black;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent; 
+            display: inline-block; 
+            margin: 0;
+        }
+    }
+
+    .partners-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 50px;
+
+        img {
+            width: 200px;
+            height: auto;
+            margin: 20px;
+        }
     }
 }
