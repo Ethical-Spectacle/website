@@ -11,10 +11,16 @@ const Signup = ({ handleAuthentication }) => {
     email: "",
     password: "",
     bio: "",
+    entrepreneur: false,
+    developer: false,
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleCheckboxChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.checked });
   };
 
   const handleSubmit = async (e) => {
@@ -83,6 +89,28 @@ const Signup = ({ handleAuthentication }) => {
             placeholder="Bio"
           ></textarea>
         </div>
+          <div className="input-group">
+            <label>
+              <input
+                type="checkbox"
+                name="entrepreneur"
+                checked={formData.entrepreneur}
+                onChange={handleCheckboxChange}
+              />
+              Entrepreneur
+            </label>
+          </div>
+          <div className="input-group">
+            <label>
+              <input
+                type="checkbox"
+                name="developer"
+                checked={formData.developer}
+                onChange={handleCheckboxChange}
+              />
+              Developer
+            </label>
+          </div>
         <div className="button-group">
           <button type="submit">Sign Up</button>
         </div>
