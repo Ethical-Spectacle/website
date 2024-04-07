@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Nav.css';
+import './Nav.scss';
 import { FaMeetup, FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 import { RiMenu3Line } from "react-icons/ri";
 import { GrClose } from "react-icons/gr";
