@@ -24,7 +24,7 @@
       height: 0; /* Start height at 0 */
       background-image: repeating-linear-gradient(to bottom, #898989 0px, #898989 5px, transparent 1px, transparent 15px);
       animation: fadeInEffectTTB 1.5s ease-out forwards;
-      animation-delay: 1;
+      animation-delay: 0.75s;
     }
   
     &::after {

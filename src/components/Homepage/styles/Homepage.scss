@@ -21,10 +21,10 @@
 .about-section {
     position: relative;
     height: 100vh;
-    margin-top: -100px;
+    margin-top: -50px;
     position: relative;
     z-index: 10;
-    border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 20px 20px;
     background-color: $dark-gray;
     color: white;
     
@@ -50,5 +50,12 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+.partners {
+    img .chip {
+        width: 600px;
+        margin: 0 20px;
     }
 }

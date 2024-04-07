@@ -3,7 +3,7 @@ import './Nav.scss';
 import { FaMeetup, FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 import { RiMenu3Line } from "react-icons/ri";
 import { GrClose } from "react-icons/gr";
-import logo from '../../assets/navlogo.webp';
+import logo from '../../assets/light_logo_no_bg.png';
 import huggingFaceLogo from '../../assets/huggingface.svg';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
@@ -47,8 +47,6 @@ const Nav = ({ isMobileMenuOpen, toggleMobileMenu }) => {
             <Link to="/"> 
               <img src={logo} className="nav-logo" alt="Ethical Spectacle logo" />
             </Link>        
-
-            <p className='nav-text'>Ethical Spectacle</p>
 
             {/* Nav buttons */}
             <div className="Nav-buttons">
