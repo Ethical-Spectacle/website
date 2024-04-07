@@ -62,8 +62,8 @@
 }
 
 .apply {
-    background-color: #242424;
-    color: #ff93b1;
+    color: #242424;
+    background-color: #ff93b1;
     text-decoration: none;
     padding: 20px;
     margin: 25px 250px 40px;
@@ -72,8 +72,8 @@
 }
 
 .apply:hover {
-    background-color: #ff93b1;
-    color: #242424;
+    color: #ff93b1;
+    background-color: #242424;
 }
 
 .how-it-works {

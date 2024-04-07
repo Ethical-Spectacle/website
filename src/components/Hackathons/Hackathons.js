@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hackathons.css';
+import Judges from './Judges/Judges';
 import ESLogo from '../../assets/dark_logo_no_bg.png';
 import AZVCLogo from '../../assets/AZVC_Transparent.png';
 import { IoCloseSharp } from "react-icons/io5";
@@ -18,7 +19,7 @@ const Hackathons = () => {
 
         <div className="hackathon-title">
           <h2>"It's the sustainability for me"</h2>
-          <p>April 5 (5:00pm) - April 7 (7:30pm), 2024</p>
+          <p>April 5 (5:00pm) - April 7 (8:00pm), 2024</p>
           <p>Location: Tempe, AZ (In Person)</p>
         </div>
 
@@ -34,6 +35,8 @@ const Hackathons = () => {
             <p>Each team will have a mix of developers and entrepreneurs. Devs can focus on deving and entrepreneurs can focus on 'preneu-ing.</p>
             <p>Due to demand, we have to limit participants. A resume is required for the application.</p>
         </div>
+
+        <Judges />
 
         <div className="next-steps">
             <h2>How to Participate:</h2>

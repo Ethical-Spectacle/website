@@ -1,0 +1,57 @@
+.Judges {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .judges-intro, .judges-note {
+    text-align: center;
+    margin: 40px 0px 20px;
+  }
+
+  .judges-intro p {
+    margin: 20px 00px 20px
+  }
+  
+  .judges-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .judge {
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px 5px;
+    border-radius: 8px;
+  }
+  
+  .judge-photo {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .judge h2 {
+    margin: 5px 0 0px;
+    font-size: 1.5rem;
+  }
+
+  .judge a {
+    text-decoration: none;
+    color: #242424;
+  }
+
+  .judge h4 {
+    margin: 0px 20px 20px;
+  }
+  
+  .judge p {
+    font-size: 0.9rem;
+    margin: 0px 20px;
+    color: #666;
+  }
+  

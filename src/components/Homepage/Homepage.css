@@ -3,6 +3,10 @@ h1 {
     font-size: 30pt;
 }
 
+p {
+    font-size: 12pt;
+}
+
 .Home {
     background-color: #e6e6e6;
     display: flex;
@@ -20,8 +24,8 @@ h1 {
 }
 
 .cta {
-    background-color: #242424;
-    color: #ff93b1;
+    background-color: #ff93b1;
+    color: #242424;
     text-decoration: none;
     padding: 15px;
     margin: 0px 5px 20px;
@@ -33,7 +37,7 @@ h1 {
 .About-section {
     background-color: #e6e6e6;
     text-align: center;
-    padding: 20px 50px;
+    padding: 20px 100px;
     color: #30383b;
 }
 
@@ -65,10 +69,31 @@ h1 {
     font-size: 22pt;
 }
 
+.AZVCLogo {
+    height: 80px;
+    padding-right: 50px;
+}
+
+.GCNLogo {
+    height: 50px;
+    padding-bottom: 12px;
+}
+
 @media (max-width: 610px) {
+
     h1 {
         font-family: 'DM Serif Text', serif;
         font-size: 30pt;
         letter-spacing: -1px;
     }
+
+    .About-section {
+        padding: 50px;
+    }
+
+    .AZVCLogo {
+        padding-right: 0px;
+        padding: 20px;
+    }
+
 }

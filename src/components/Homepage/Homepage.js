@@ -7,7 +7,6 @@ import GCNlogo from '../../assets/global_career_network.png';
 const Homepage = () => {
   return (
     <div className="Home">
-      {/* Content specific to the home page */}
       <header className="Home-header">
         <h1>Ethical Spectacle Research</h1>
         <p>A melting pot of ethical leaders and techies that write *clean* code...</p>
@@ -22,16 +21,11 @@ const Homepage = () => {
       <section id="partners" className="Partners-section">
         <h1>Partners</h1>
         <a href="https://azvc.com/" target="_blank" rel="noopener noreferrer">
-          <img src={AZVClogo} alt="Arizona Venture Capital" style={{ height: '80px', paddingRight: '50px' }} />
+          <img className="AZVCLogo" src={AZVClogo} alt="Arizona Venture Capital" style={{ height: '80px'}} />
         </a> 
-
         <a href="https://www.linkedin.com/company/global-career-network/" target="_blank" rel="noopener noreferrer">
-          <img src={GCNlogo} alt="Global Career Network" style={{ height: '50px', marginBottom: '5px', padding: '10px' }} />
+          <img className="GCNLogo" src={GCNlogo} alt="Global Career Network" style={{ height: '50px', marginBottom: '5px'}} />
         </a>
-
-        {/* Add global career network */}
-        {/* Add  */}
-
       </section>
 
       <section id="contact" className="Contact-section">

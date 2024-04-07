@@ -26,7 +26,9 @@ const Nav = ({ isMobileMenuOpen, toggleMobileMenu }) => {
           <NavLink to="/" className={activePath === '/' ? 'activeNavLink' : ''}><h1>Home</h1></NavLink>
           <NavLink to="/hackathons" className={activePath === '/hackathons' ? 'activeNavLink' : ''}><h1>Hackathons</h1></NavLink>
           <NavLink to="/about" className={activePath === '/about' ? 'activeNavLink' : ''}><h1>About Us</h1></NavLink>
-          
+          <NavLink to="/account" className={activePath === '/account' ? 'activeNavLink' : ''}><h1>Profile</h1></NavLink>
+          <NavLink to="/leaderboard" className={activePath === '/leaderboard' ? 'activeNavLink' : ''}><h1>Leaderboard</h1></NavLink>
+
             <div className='Menu-socials'>
               <a href="https://github.com/Ethical-Spectacle"><FaGithub /></a>
               <a href="https://www.meetup.com/ethical-spectacle-research/events/"><FaMeetup /></a>

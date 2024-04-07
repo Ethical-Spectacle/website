@@ -1,0 +1,36 @@
+.myAccount h1 {
+    font-family: 'DM Serif Text', serif;
+    color: #e6e6e6;
+    margin: 0;
+    padding: 0;
+}
+
+.myAccount h2 {
+    font-family: 'DM Serif Text', serif;
+    color: #e6e6e6;
+    margin: 8px 0;
+    padding: 0;
+}
+
+.myAccount p {
+    color: #e6e6e6;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.links {
+    font-size: 24pt;
+    color: #ff93b1;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.links:hover {
+    color: #e6e6e6;
+}

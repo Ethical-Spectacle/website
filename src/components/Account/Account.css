@@ -1,0 +1,47 @@
+.AccountPage h1 {
+    font-family: 'DM Serif Text', serif;
+    color: #e6e6e6;
+}
+
+.AccountPage h2 {
+    font-family: 'DM Serif Text', serif;
+    color: #e6e6e6;
+}
+
+.AccountPage p {
+    color: #e6e6e6;
+}
+
+.logout-button {
+    font-family: 'DM Serif Text', serif;
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff93b1;
+    color: #30383b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #30383b;
+    color: #e6e6e6;
+}
+
+.toggle-button {
+    margin-top: 10px;
+    font-family: 'DM Serif Text', serif;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #ff93b1;
+    color: #30383b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-button:hover {
+    background-color: #30383b;
+    color: #e6e6e6;
+}

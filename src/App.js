@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'; // Use HashRouter
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 import Homepage from './components/Homepage/Homepage';
 import Hackathons from './components/Hackathons/Hackathons';
 import About from './components/About/About';
+import Account from './components/Account/Account';
+import Leaderboard from './components/Leaderboard/Leaderboard';
 
 const App = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,6 +25,8 @@ const App = () => {
           <Route path="/" element={<Homepage />} />
           <Route path="/hackathons" element={<Hackathons />} />
           <Route path="/about" element={<About />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
         </Routes>
         <Footer />
       </div>

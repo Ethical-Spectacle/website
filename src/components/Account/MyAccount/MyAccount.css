@@ -1,0 +1,22 @@
+.my-account-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    gap: 10px; 
+  }
+  
+@media (max-width: 768px) {
+    .my-account-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto; 
+    }
+}
+  
+.profile-info, .badges, .mini-events, .opportunities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
