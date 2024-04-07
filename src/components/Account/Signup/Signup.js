@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import './Signup.css'; // Import CSS file
+import React, { useState } from "react";
+import "./Signup.css"; // Import CSS file
+import { API_URL_PROD } from "../../../../config/prod";
 
 const Signup = ({ handleAuthentication }) => {
   const [formData, setFormData] = useState({
-    fname: '',
-    lname: '',
-    email: '',
-    password: '',
-    bio: ''
+    fname: "",
+    lname: "",
+    email: "",
+    password: "",
+    bio: "",
   });
 
   const handleChange = (e) => {
@@ -17,19 +18,19 @@ const Signup = ({ handleAuthentication }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://127.0.0.1:5000/create_account', {
-        method: 'POST',
+      const response = await fetch(`${API_URL_PROD}/create_account`, {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
       const data = await response.json();
       console.log(data);
       // If account creation is successful, call handleAuthentication to update state
       handleAuthentication(formData.email);
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
 
@@ -37,19 +38,48 @@ const Signup = ({ handleAuthentication }) => {
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <div className="input-group">
-          <input type="text" name="fname" value={formData.fname} onChange={handleChange} placeholder="First Name" />
+          <input
+            type="text"
+            name="fname"
+            value={formData.fname}
+            onChange={handleChange}
+            placeholder="First Name"
+          />
         </div>
         <div className="input-group">
-          <input type="text" name="lname" value={formData.lname} onChange={handleChange} placeholder="Last Name" />
+          <input
+            type="text"
+            name="lname"
+            value={formData.lname}
+            onChange={handleChange}
+            placeholder="Last Name"
+          />
         </div>
         <div className="input-group">
-          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+          />
         </div>
         <div className="input-group">
-          <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Password" />
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="Password"
+          />
         </div>
         <div className="input-group">
-          <textarea name="bio" value={formData.bio} onChange={handleChange} placeholder="Bio"></textarea>
+          <textarea
+            name="bio"
+            value={formData.bio}
+            onChange={handleChange}
+            placeholder="Bio"
+          ></textarea>
         </div>
         <div className="button-group">
           <button type="submit">Sign Up</button>

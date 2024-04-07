@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './ProfileInfo.css';
-import { FaGlobe, FaGithub, FaLinkedin } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import "./ProfileInfo.css";
+import { FaGlobe, FaGithub, FaLinkedin } from "react-icons/fa";
+import { API_URL_PROD } from "../../../../../config/prod";
 
 const ProfileInfo = ({ userEmail }) => {
   const [profile, setProfile] = useState(null);
@@ -11,16 +12,16 @@ const ProfileInfo = ({ userEmail }) => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/get_profile', {
-          method: 'POST',
+        const response = await fetch(`${API_URL_PROD}/get_profile`, {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({ email: userEmail }),
         });
 
         if (!response.ok) {
-          throw new Error('Failed to fetch profile');
+          throw new Error("Failed to fetch profile");
         }
 
         const data = await response.json();
@@ -44,25 +45,25 @@ const ProfileInfo = ({ userEmail }) => {
   const updateProfile = async () => {
     const updatedProfile = {
       email: userEmail,
-      fname: document.getElementById('fname').value,
-      lname: document.getElementById('lname').value,
-      bio: document.getElementById('bio').value,
-      website: document.getElementById('website').value,
-      github: document.getElementById('github').value,
-      linkedin: document.getElementById('linkedin').value,
+      fname: document.getElementById("fname").value,
+      lname: document.getElementById("lname").value,
+      bio: document.getElementById("bio").value,
+      website: document.getElementById("website").value,
+      github: document.getElementById("github").value,
+      linkedin: document.getElementById("linkedin").value,
     };
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/update_profile', {
-        method: 'POST',
+      const response = await fetch("http://127.0.0.1:5000/update_profile", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(updatedProfile),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to update profile');
+        throw new Error("Failed to update profile");
       }
 
       const updatedData = await response.json(); // server returns updated profile
@@ -94,32 +95,95 @@ const ProfileInfo = ({ userEmail }) => {
         <div>
           {isEditing ? (
             <div>
-              <input type="text" defaultValue={profile.fname} id="fname" placeholder="First Name"/><br/>
-              <input type="text" defaultValue={profile.lname} id="lname" placeholder="Last Name"/><br/>
-              <input type="text" defaultValue={profile.bio} id="bio" placeholder="Bio"/><br/>
-              <input type="text" defaultValue={profile.website} id="website" placeholder="Personal Website"/><br/>
-              <input type="text" defaultValue={profile.github} id="github"  placeholder="GitHub URL"/><br/>
-              <input type="text" defaultValue={profile.linkedin} id="linkedin" placeholder="LinkedIn URL"/><br/>
+              <input
+                type="text"
+                defaultValue={profile.fname}
+                id="fname"
+                placeholder="First Name"
+              />
+              <br />
+              <input
+                type="text"
+                defaultValue={profile.lname}
+                id="lname"
+                placeholder="Last Name"
+              />
+              <br />
+              <input
+                type="text"
+                defaultValue={profile.bio}
+                id="bio"
+                placeholder="Bio"
+              />
+              <br />
+              <input
+                type="text"
+                defaultValue={profile.website}
+                id="website"
+                placeholder="Personal Website"
+              />
+              <br />
+              <input
+                type="text"
+                defaultValue={profile.github}
+                id="github"
+                placeholder="GitHub URL"
+              />
+              <br />
+              <input
+                type="text"
+                defaultValue={profile.linkedin}
+                id="linkedin"
+                placeholder="LinkedIn URL"
+              />
+              <br />
 
               <button onClick={updateProfile}>Save</button>
             </div>
           ) : (
             <div>
-              <h2><strong>Name:</strong> {profile.fname} {profile.lname}</h2>
+              <h2>
+                <strong>Name:</strong> {profile.fname} {profile.lname}
+              </h2>
               <p>Member #{profile.id}</p>
-              <p><strong>Bio:</strong> {profile.bio}</p>
-              <div className='link-container'>
+              <p>
+                <strong>Bio:</strong> {profile.bio}
+              </p>
+              <div className="link-container">
                 {profile.website && (
-                  <a className="links" href={profile.website} target="_blank" rel="noopener noreferrer"><FaGlobe /></a>
+                  <a
+                    className="links"
+                    href={profile.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGlobe />
+                  </a>
                 )}
                 {profile.github && (
-                  <a className="links" href={profile.github} target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                  <a
+                    className="links"
+                    href={profile.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub />
+                  </a>
                 )}
                 {profile.linkedin && (
-                  <a className="links" href={profile.linkedin} target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                  <a
+                    className="links"
+                    href={profile.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedin />
+                  </a>
                 )}
               </div>
-              <p><strong>Badges:</strong> {profile.badges}</p>
+              <p>
+                <strong>Badges:</strong> {profile.badges}
+              </p>
               <button onClick={toggleEditMode}>Edit Profile</button>
             </div>
           )}
