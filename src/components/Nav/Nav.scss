@@ -4,6 +4,9 @@
     border-bottom: $dark-gray 1px solid;
     color: $dark-gray;
     font-size: 2rem;
+    position: relative;
+    z-index: 100;
+    background-color: $dark-gray;
 
     .boxed-container {
         display: flex;
