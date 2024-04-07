@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./ProfileInfo.css";
 import { FaGlobe, FaGithub, FaLinkedin } from "react-icons/fa";
 const API_URL_PROD =
   "https://ethical-spectacle-backend-e4d474b5c453.herokuapp.com";
@@ -91,7 +90,7 @@ const ProfileInfo = ({ userEmail }) => {
 
   return (
     <div className="myAccount">
-      <h1>Hi {profile?.fname},</h1>
+      <h1>Hey {profile?.fname},</h1>
       {profile ? (
         <div>
           {isEditing ? (
@@ -142,10 +141,7 @@ const ProfileInfo = ({ userEmail }) => {
               <button onClick={updateProfile}>Save</button>
             </div>
           ) : (
-            <div>
-              <h2>
-                <strong>Name:</strong> {profile.fname} {profile.lname}
-              </h2>
+            <div className="details-container">
               <p>Member #{profile.id}</p>
               <p>
                 <strong>Bio:</strong> {profile.bio}
@@ -182,10 +178,7 @@ const ProfileInfo = ({ userEmail }) => {
                   </a>
                 )}
               </div>
-              <p>
-                <strong>Badges:</strong> {profile.badges}
-              </p>
-              <button onClick={toggleEditMode}>Edit Profile</button>
+              <button className="primary-button" onClick={toggleEditMode}>Edit Profile</button>
             </div>
           )}
         </div>

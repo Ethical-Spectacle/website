@@ -100,10 +100,13 @@ const Account = () => {
           </>
         ) : (
           <>
+            <div className="logout-container">
+              <button className="logout-button" onClick={handleLogout}>
+                Log Out
+              </button>
+            </div>
+
             <MyAccount userEmail={userEmail} />
-            <button className="logout-button" onClick={handleLogout}>
-              Log Out
-            </button>
           </>
         )
       ) : (

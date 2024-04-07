@@ -111,7 +111,7 @@ function Badges({ userEmail }) {
           );
         })
       ) : (
-        <div>No Badges Found</div>
+        <p>You don't have any badge yet</p>
       )}
     </div>
   );
