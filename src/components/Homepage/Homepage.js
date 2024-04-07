@@ -1,19 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Homepage.scss';
+import './styles/Homepage.scss';
 import LineDecorations from './LineDecorations';  
+import AnimatedTitle from './animations/AnimatedTitle';
 import AZVClogo from '../../assets/AZVC_Transparent.png';
 import GCNlogo from '../../assets/global_career_network.png';
 
 const Homepage = () => {
   return (
   <>
-    <header className="hero-section boxed-container">
-      <LineDecorations />
-      <h1 className='centered-text'>Ethical Spectacle <br /> Research</h1>
-      <p className='centered-text'>A melting pot of ethical leaders and techies that write <span className='pink-highlight'>clean</span> code.</p>
-      <Link to="/hackathons" className="primary-button">Join Our Hackathon</Link>
-    </header>
+      <header className="hero-section boxed-container">
+        <LineDecorations />
+        <AnimatedTitle text="Ethical Spectacle <br/> Research" />
+        <p className="centered-text">
+          A melting pot of ethical leaders and techies that write{' '}
+          <span className="pink-highlight">clean</span> code.
+        </p>
+        <Link to="/hackathons" className="primary-button">
+          Join Our Hackathon
+        </Link>
+      </header>
 
     <section id="about" className="about-section">
       <div className="boxed-container centered-text">
