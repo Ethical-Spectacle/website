@@ -17,7 +17,7 @@ const Nav = ({ isMobileMenuOpen, toggleMobileMenu }) => {
   }, [location]);
 
   return (
-    <div>
+    <>
       {/* Menu links */}
       {isMobileMenuOpen && (
         <div className="Overlay" onClick={toggleMobileMenu}>
@@ -64,7 +64,7 @@ const Nav = ({ isMobileMenuOpen, toggleMobileMenu }) => {
             </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 };
 
