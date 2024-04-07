@@ -23,6 +23,7 @@
       height: 100%;
       background-image: repeating-linear-gradient(to right, #898989 0px, #898989 5px, transparent 1px, transparent 15px);
       animation: fadeInEffect 1.5s ease-out forwards;
+      animation-delay: 0.7s;
     }
   
     &::after {

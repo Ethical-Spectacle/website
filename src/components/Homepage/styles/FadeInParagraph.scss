@@ -1,0 +1,10 @@
+.fade-in-paragraph {
+    opacity: 0;
+    transform: translateX(-90px);
+    transition: opacity 1.7s ease-out, transform 0.85s ease-out;
+  
+    &.fade-in {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}

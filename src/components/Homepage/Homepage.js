@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './styles/Homepage.scss';
 import LineDecorations from './LineDecorations';  
 import AnimatedTitle from './animations/AnimatedTitle';
+import FadeInParagraph from './animations/FadeInParagraph';
 import AZVClogo from '../../assets/AZVC_Transparent.png';
 import GCNlogo from '../../assets/global_career_network.png';
 
@@ -12,10 +13,10 @@ const Homepage = () => {
       <header className="hero-section boxed-container">
         <LineDecorations />
         <AnimatedTitle text="Ethical Spectacle <br/> Research" />
-        <p className="centered-text">
+        <FadeInParagraph>
           A melting pot of ethical leaders and techies that write{' '}
           <span className="pink-highlight">clean</span> code.
-        </p>
+        </FadeInParagraph>
         <Link to="/hackathons" className="primary-button">
           Join Our Hackathon
         </Link>
