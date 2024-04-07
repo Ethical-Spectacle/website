@@ -1,21 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Homepage.css';
+import './Homepage.scss';
 import AZVClogo from '../../assets/AZVC_Transparent.png';
 import GCNlogo from '../../assets/global_career_network.png';
 
 const Homepage = () => {
   return (
-  <section className="hero-section">
-    <header className="Home-header">
-      <h1>Ethical Spectacle Research</h1>
-      <p>A melting pot of ethical leaders and techies that write *clean* code...</p>
-      <Link to="/hackathons" className="cta">Join Our Hackathon</Link>
+  <>
+    <header className="hero-section boxed-container">
+      <h1 className='centered-text'>Ethical Spectacle <br /> Research</h1>
+      <p className='centered-text'>A melting pot of ethical leaders and techies that write <span className='pink-highlight'>clean</span> code.</p>
+      <Link to="/hackathons" className="primary-button">Join Our Hackathon</Link>
     </header>
 
-    <section id="about" className="About-section">
-      <h2>With Great Power Comes Great Responsibility</h2>
-      <p>The future lies in the hands of developers. Us devs have a responsibility to be careful, without stifling progress. Our mission is to build impactful tech, with the forethought to protect users.</p>
+    <section id="about" className="about-section">
+      <div className="boxed-container centered-text">
+        <h2>With <span className='white-highlight'>Great Power</span>
+          <br /> Comes 
+          <span className='pink-highlight'>Great Responsibility</span>
+        </h2>
+        <p>The future lies in the hands of developers. Us devs have a responsibility to be careful, without stifling progress. Our mission is to build impactful tech, with the forethought to protect users.</p>
+      </div>
     </section>
 
     <section id="partners" className="Partners-section">
@@ -32,7 +37,7 @@ const Homepage = () => {
       <h2>Contact Us</h2>
       <p>Interested in joining our mission or have questions? Contact our president Maximus Powers at maximuspowersdev@gmail.com</p>
     </section>
-  </section>
+  </>
   );
 };
 
