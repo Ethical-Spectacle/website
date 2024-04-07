@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./MiniEvents.css";
-import { API_URL_PROD } from "../../../../../config/prod";
+const API_URL_PROD =
+  "https://ethical-spectacle-backend-e4d474b5c453.herokuapp.com";
 
 function MiniEvents() {
   const [events, setEvents] = useState([]);

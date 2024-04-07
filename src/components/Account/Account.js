@@ -5,7 +5,9 @@ import Signup from "./Signup/Signup";
 import MyAccount from "./MyAccount/MyAccount";
 import Admin from "./Admin/Admin";
 import EmailVerification from "./EmailVerification/EmailVerification";
-import { API_URL_PROD } from "../../../config/prod";
+
+const API_URL_PROD =
+  "https://ethical-spectacle-backend-e4d474b5c453.herokuapp.com";
 
 const Account = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
