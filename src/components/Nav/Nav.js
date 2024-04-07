@@ -3,7 +3,7 @@ import './Nav.scss';
 import { FaMeetup, FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 import { RiMenu3Line } from "react-icons/ri";
 import { GrClose } from "react-icons/gr";
-import logo from '../../assets/light_logo_no_bg.png';
+import logo from '../../assets/navlogo.webp';
 import huggingFaceLogo from '../../assets/huggingface.svg';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
@@ -42,28 +42,26 @@ const Nav = ({ isMobileMenuOpen, toggleMobileMenu }) => {
         </div>
       )}
 
-      <nav className="App-nav">
-        <div className="Logo-container">
-          <Link to="/"> 
-            <img src={logo} className="App-logo" alt="Ethical Spectacle logo" />
-          </Link>        
-        </div>
+      <nav className='nav-bar'>
+        <div className="boxed-container">
+            <Link to="/"> 
+              <img src={logo} className="nav-logo" alt="Ethical Spectacle logo" />
+            </Link>        
 
-        <div className="Nav-text">
-            <h1>Ethical Spectacle</h1>
-        </div>
+            <p className='nav-text'>Ethical Spectacle</p>
 
-        {/* Nav buttons */}
-        <div className="Nav-buttons">
-          <a href="https://huggingface.co/ethical-spectacle" target="_blank" rel="noopener noreferrer">
-                <img src={huggingFaceLogo} alt="Hugging Face" style={{ width: '22px', height: '22px', marginTop: '1px' }} />
-          </a>
-          <a href="https://www.meetup.com/ethical-spectacle-research/events/"><FaMeetup /></a>
-          <a href="https://www.linkedin.com/company/ethical-spectacle-research"><FaLinkedinIn /></a>
-          <div className="Menu-icon" onClick={toggleMobileMenu} 
-               style={{ color: isMobileMenuOpen ? '#242424' : '#ff93b1' }}> 
-            {isMobileMenuOpen ? <GrClose /> : <RiMenu3Line />}
-          </div>
+            {/* Nav buttons */}
+            <div className="Nav-buttons">
+              <a href="https://huggingface.co/ethical-spectacle" target="_blank" rel="noopener noreferrer">
+                    <img src={huggingFaceLogo} alt="Hugging Face" style={{ width: '22px', height: '22px', marginTop: '1px' }} />
+              </a>
+              <a href="https://www.meetup.com/ethical-spectacle-research/events/"><FaMeetup /></a>
+              <a href="https://www.linkedin.com/company/ethical-spectacle-research"><FaLinkedinIn /></a>
+              <div className="Menu-icon" onClick={toggleMobileMenu} 
+                  style={{ color: isMobileMenuOpen ? '#242424' : '#ff93b1' }}> 
+                {isMobileMenuOpen ? <GrClose /> : <RiMenu3Line />}
+              </div>
+            </div>
         </div>
       </nav>
     </div>
