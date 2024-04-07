@@ -24,7 +24,7 @@ const Login = ({ handleAuthentication }) => {
       if (response.ok) {
         const data = await response.json();
         console.log(data);
-        handleAuthentication(formData.email);
+        handleAuthentication(formData.email, data.email_verified);
       } else {
         console.error('Authentication failed:', response.statusText);
       }

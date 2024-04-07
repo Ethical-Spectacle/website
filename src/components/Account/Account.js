@@ -32,6 +32,14 @@ const Account = () => {
     }
   }, []);  
 
+  useEffect(() => {
+    if (userEmail && isLoggedIn) {
+      setIsLoadingEmailVerification(true);
+      checkEmailVerification(userEmail);
+    }
+  }, [userEmail, isLoggedIn]); // This effect reacts to changes in userEmail and isLoggedIn.
+
+
   const checkEmailVerification = async (email) => {
     try {
       const response = await fetch(`http://127.0.0.1:5000/check_email_verification?email=${email}`);
