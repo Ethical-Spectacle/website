@@ -112,7 +112,7 @@ const Signup = ({ handleAuthentication }) => {
             </label>
           </div>
         <div className="button-group">
-          <button type="submit">Sign Up</button>
+          <button className="sign-up-button" type="submit">Sign Up</button>
         </div>
       </form>
     </div>

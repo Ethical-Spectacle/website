@@ -35,18 +35,21 @@
 }
 
 .toggle-button {
-    margin-top: 10px;
-    font-family: 'DM Serif Text', serif;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    width: 200px;
     padding: 10px 20px;
-    font-size: 14px;
-    background-color: #ff93b1;
-    color: #30383b;
+    background-color: #30383b;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
 }
 
 .toggle-button:hover {
-    background-color: #30383b;
-    color: #e6e6e6;
+    background-color: #ff93b1;
+    color: #30383b;
 }

@@ -37,6 +37,7 @@ const Login = ({ handleAuthentication }) => {
 
   return (
     <div className="login-container">
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
           <input
@@ -57,7 +58,7 @@ const Login = ({ handleAuthentication }) => {
           />
         </div>
         <div className="button-group">
-          <button type="submit">Log In</button>
+          <button className="submit-button" type="submit">Log In</button>
         </div>
       </form>
     </div>
