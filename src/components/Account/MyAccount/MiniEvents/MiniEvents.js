@@ -50,7 +50,8 @@ function MiniEvents() {
           <div key={index} className="event">
             <div className="event-info">
               <span className="event-name">{event.name}</span>
-              <span className="event-date">{formatDate(event.date)}</span>
+              <span className="event-date">Date to be announced soon</span>
+              {/*<span className="event-date">{formatDate(event.date)}</span>*/}
               <span className="event-address">{event.address}</span>
             </div>
             <div className="event-description">
