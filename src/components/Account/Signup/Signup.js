@@ -44,6 +44,7 @@ const Signup = ({ handleAuthentication }) => {
 
   return (
     <div className="form-container">
+      <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
           <input
