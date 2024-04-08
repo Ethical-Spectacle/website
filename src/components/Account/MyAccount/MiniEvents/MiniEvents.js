@@ -52,10 +52,11 @@ function MiniEvents() {
               <span className="event-name">{event.name}</span>
               <span className="event-date">Date to be announced soon</span>
               {/*<span className="event-date">{formatDate(event.date)}</span>*/}
-              <span className="event-address">{event.address}</span>
+              {/*<span className="event-address">{event.address}</span>*/}
             </div>
             <div className="event-description">
               {event.description}
+              {/*
               {event.url && (
                 <a
                   href={event.url}
@@ -66,6 +67,7 @@ function MiniEvents() {
                   More Info →
                 </a>
               )}
+              */}
             </div>
           </div>
         ))
