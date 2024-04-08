@@ -43,3 +43,9 @@
       z-index: 1;
     }
   }
+
+  @media (max-width: 768px) {
+    .v-decoration-left {
+      left: 20px;
+    }
+  }

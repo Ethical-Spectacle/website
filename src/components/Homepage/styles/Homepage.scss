@@ -121,3 +121,85 @@
         margin-bottom: 50px;
     }
 }
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 100px;
+        text-align: center;
+
+        h1 {
+            font-size: 4rem;
+            padding: 0 5px;
+        }
+
+        p {
+            font-size: 2rem;
+            padding: 0 5px;
+        }
+    }
+
+    .about-section {
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .partners {
+        .chip-title {
+            .chip {
+                height: 50px;
+            }
+
+            .deco-lines {
+                width: 300px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .partners-logos {
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+    .Contact-section {
+        h2 {
+            font-size: 2rem;
+        }
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .partners {
+        width: 100%;
+        overflow: hidden;
+        flex-wrap: nowrap;
+    }
+
+    .about-section {
+        p {
+            font-size: 2rem;
+        }
+    }
+
+    .Contact-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}
