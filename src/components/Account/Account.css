@@ -54,3 +54,9 @@
     background-color: #ff93b1;
     color: #30383b;
 }
+
+@media (max-width: 768px) {
+    .AccountPage {
+        overflow: scroll;
+    }
+}

@@ -44,3 +44,8 @@
     transform: translateY(-2px); /* Slight lift effect on hover */
   }
   
+  @media (max-width: 768px) {
+    .opportunities-grid {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+  }
