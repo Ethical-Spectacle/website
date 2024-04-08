@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import './Login.css'; // Import CSS file
+import React, { useState } from "react";
+import "./Login.css"; // Import CSS file
+const API_URL_PROD =
+  "https://ethical-spectacle-backend-e4d474b5c453.herokuapp.com";
 
 const Login = ({ handleAuthentication }) => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    email: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -14,37 +16,49 @@ const Login = ({ handleAuthentication }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://127.0.0.1:5000/auth', {
-        method: 'POST',
+      const response = await fetch(`${API_URL_PROD}/auth`, {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
       if (response.ok) {
         const data = await response.json();
         console.log(data);
-        handleAuthentication(formData.email);
+        handleAuthentication(formData.email, data.email_verified);
       } else {
-        console.error('Authentication failed:', response.statusText);
+        console.error("Authentication failed:", response.statusText);
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
-  
 
   return (
     <div className="login-container">
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
-          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+          />
         </div>
         <div className="input-group">
-          <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Password" />
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="Password"
+          />
         </div>
         <div className="button-group">
-          <button type="submit">Log In</button>
+          <button className="submit-button" type="submit">Log In</button>
         </div>
       </form>
     </div>

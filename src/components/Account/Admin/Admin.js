@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+const API_URL_PROD =
+  "https://ethical-spectacle-backend-e4d474b5c453.herokuapp.com";
 
 const Admin = () => {
-  const [email, setEmail] = useState('');
-  const [badgeName, setBadgeName] = useState('');
-  const [pointsToAdd, setPointsToAdd] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [badgeName, setBadgeName] = useState("");
+  const [pointsToAdd, setPointsToAdd] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/add_points', {
-        method: 'POST',
+      const response = await fetch(`${API_URL_PROD}/add_points`, {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           email: email,
@@ -23,15 +25,15 @@ const Admin = () => {
       });
 
       if (response.ok) {
-        setMessage('Points successfully added!');
-        setEmail('');
-        setBadgeName('');
-        setPointsToAdd('');
+        setMessage("Points successfully added!");
+        setEmail("");
+        setBadgeName("");
+        setPointsToAdd("");
       } else {
-        setMessage('Failed to add points.');
+        setMessage("Failed to add points.");
       }
     } catch (error) {
-      setMessage('Error: ' + error.message);
+      setMessage("Error: " + error.message);
     }
   };
 
@@ -49,10 +51,10 @@ const Admin = () => {
           />
         </div>
         <div>
-        <select
+          <select
             value={badgeName}
             onChange={(e) => setBadgeName(e.target.value)}
-        >
+          >
             <option value="">Select a Badge</option>
             <option value="director">Director</option>
             <option value="event host">Event Host</option>
@@ -66,7 +68,7 @@ const Admin = () => {
             <option value="sponsor">Sponsor</option>
             <option value="attendee">Attendee</option>
             <option value="winner">Winner</option>
-        </select>
+          </select>
         </div>
 
         <div>

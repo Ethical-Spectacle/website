@@ -1,16 +1,62 @@
-.my-account-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 100vh;
-    gap: 10px; 
-  }
-  
+.my-account-container {
+    display: flex;
+    height: 90vh;
+}
+
+.my-account-container * > {
+    flex: 1;
+}
+
+.myAccount {
+    width: 80%;
+    color: black;
+    border: 1px solid #FE93B1;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.myAccount h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.primary-button {
+    background-color: #242424;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.primary-button:hover {
+    background-color: #30383b;
+}
+
 @media (max-width: 768px) {
     .my-account-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         height: auto; 
+        padding: 0px 25px;
     }
 }
   
