@@ -10,7 +10,7 @@ function Opportunities() {
         <div className="opportunity-card">
           <h3>Apply to be a researcher</h3>
           <p>Join a research project or start one of your own</p>
-          <a href="/apply-researcher" className="event-link">Apply Now</a>
+          <a href="https://mailchi.mp/8587e8733e72/apply-to-be-a-researcher" target="_blank" rel="noopener noreferrer" className="event-link">Apply Now</a>
         </div>
         <div className="opportunity-card">
           <h3>Guest write for our blog</h3>
