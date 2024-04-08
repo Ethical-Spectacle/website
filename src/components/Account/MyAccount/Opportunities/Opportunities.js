@@ -15,7 +15,7 @@ function Opportunities() {
         <div className="opportunity-card">
           <h3>Guest write for our blog</h3>
           <p>Contribute to our community's knowledge base</p>
-          <a href="/guest-write" className="event-link">Write for Us</a>
+          <a href="https://mailchi.mp/ffc8e71c05ca/guestwriter" target="_blank" rel="noopener noreferrer" className="event-link">Write for Us</a>
         </div>
         <div className="opportunity-card">
           <h3>Host an event</h3>
