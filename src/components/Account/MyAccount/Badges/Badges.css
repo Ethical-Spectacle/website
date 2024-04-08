@@ -1,6 +1,8 @@
 .badges-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     height: 400px;
     overflow-y: auto; /* Enables vertical scrolling within the container */

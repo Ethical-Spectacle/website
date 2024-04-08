@@ -6,11 +6,15 @@ import './MyAccount.css';
 
 function MyAccount({ userEmail }) {
   return (
-    <div className="my-account-grid">
-      <ProfileInfo userEmail={userEmail} />
-      <MiniEvents />
-      <Badges userEmail={userEmail}/>
-      <Opportunities />
+    <div className="my-account-container">
+      <div className="user-details">
+        <ProfileInfo userEmail={userEmail} />
+        <Badges userEmail={userEmail}/>
+      </div>
+      <div className='events'>
+        <MiniEvents />
+        <Opportunities />
+      </div>
     </div>
   );
 }

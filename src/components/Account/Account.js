@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import './Account.css';
-import Login from './Login/Login';
-import Signup from './Signup/Signup';
-import MyAccount from './MyAccount/MyAccount';
-import Admin from './Admin/Admin';
-import EmailVerification from './EmailVerification/EmailVerification';
+import React, { useState, useEffect } from "react";
+import "./Account.css";
+import Login from "./Login/Login";
+import Signup from "./Signup/Signup";
+import MyAccount from "./MyAccount/MyAccount";
+import Admin from "./Admin/Admin";
+import EmailVerification from "./EmailVerification/EmailVerification";
+
+const API_URL_PROD =
+  "https://ethical-spectacle-backend-e4d474b5c453.herokuapp.com";
 
 const Account = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -12,25 +15,27 @@ const Account = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [showLogin, setShowLogin] = useState(true);
   const [isEmailVerified, setIsEmailVerified] = useState(false);
-  const [isLoadingEmailVerification, setIsLoadingEmailVerification] = useState(false);
+  const [isLoadingEmailVerification, setIsLoadingEmailVerification] =
+    useState(false);
 
   useEffect(() => {
-    console.log('Initializing state from localStorage');
-    const storedUserEmail = localStorage.getItem('userEmail');
-    const storedIsLoggedIn = localStorage.getItem('isLoggedIn') === 'true'; 
-    const storedIsEmailVerified = localStorage.getItem('isEmailVerified') === 'true';
-    const isAdmin = storedUserEmail === 'admin@ethicalspectacle.com';
-  
+    console.log("Initializing state from localStorage");
+    const storedUserEmail = localStorage.getItem("userEmail");
+    const storedIsLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const storedIsEmailVerified =
+      localStorage.getItem("isEmailVerified") === "true";
+    const isAdmin = storedUserEmail === "admin@ethicalspectacle.com";
+
     setUserEmail(storedUserEmail);
     setIsLoggedIn(storedIsLoggedIn);
     setIsAdmin(isAdmin);
     setIsEmailVerified(storedIsEmailVerified);
-  
+
     if (storedUserEmail && storedIsLoggedIn && !storedIsEmailVerified) {
       setIsLoadingEmailVerification(true);
       checkEmailVerification(storedUserEmail);
     }
-  }, []);  
+  }, []);
 
   useEffect(() => {
     if (userEmail && isLoggedIn) {
@@ -39,16 +44,17 @@ const Account = () => {
     }
   }, [userEmail, isLoggedIn]); // This effect reacts to changes in userEmail and isLoggedIn.
 
-
   const checkEmailVerification = async (email) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/check_email_verification?email=${email}`);
+      const response = await fetch(
+        `${API_URL_PROD}/check_email_verification?email=${email}`
+      );
       const data = await response.json();
 
       setIsEmailVerified(data.is_verified);
-      localStorage.setItem('isEmailVerified', data.is_verified);
+      localStorage.setItem("isEmailVerified", data.is_verified);
     } catch (error) {
-      console.error('Error checking email verification:', error);
+      console.error("Error checking email verification:", error);
     } finally {
       setIsLoadingEmailVerification(false);
     }
@@ -57,12 +63,12 @@ const Account = () => {
   const handleAuthentication = (email, emailVerified) => {
     setUserEmail(email);
     setIsLoggedIn(true);
-    setIsAdmin(email === 'admin@ethicalspectacle.com');
+    setIsAdmin(email === "admin@ethicalspectacle.com");
     setIsEmailVerified(emailVerified);
 
-    localStorage.setItem('userEmail', email);
-    localStorage.setItem('isLoggedIn', 'true');
-    localStorage.setItem('isEmailVerified', emailVerified);
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("isEmailVerified", emailVerified);
   };
 
   const handleLogout = () => {
@@ -71,12 +77,12 @@ const Account = () => {
     setIsAdmin(false);
     setIsEmailVerified(false);
 
-    localStorage.removeItem('userEmail');
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('isEmailVerified');
+    localStorage.removeItem("userEmail");
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("isEmailVerified");
   };
 
-  const toggleForm = () => setShowLogin(prev => !prev);
+  const toggleForm = () => setShowLogin((prev) => !prev);
 
   return (
     <div className="AccountPage">
@@ -88,12 +94,19 @@ const Account = () => {
         ) : isAdmin ? (
           <>
             <Admin />
-            <button className='logout-button' onClick={handleLogout}>Log Out</button>
+            <button className="logout-button" onClick={handleLogout}>
+              Log Out
+            </button>
           </>
         ) : (
           <>
+            <div className="logout-container">
+              <button className="logout-button" onClick={handleLogout}>
+                Log Out
+              </button>
+            </div>
+
             <MyAccount userEmail={userEmail} />
-            <button className='logout-button' onClick={handleLogout}>Log Out</button>
           </>
         )
       ) : (
@@ -101,12 +114,16 @@ const Account = () => {
           {showLogin ? (
             <>
               <Login handleAuthentication={handleAuthentication} />
-              <button className='toggle-button' onClick={toggleForm}>Switch to Signup</button>
+              <button className="toggle-button" onClick={toggleForm}>
+                Switch to Signup
+              </button>
             </>
           ) : (
             <>
               <Signup handleAuthentication={handleAuthentication} />
-              <button className='toggle-button' onClick={toggleForm}>Switch to Login</button>
+              <button className="toggle-button" onClick={toggleForm}>
+                Switch to Login
+              </button>
             </>
           )}
         </>
