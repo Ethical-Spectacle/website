@@ -108,3 +108,16 @@
         }
     }
 }
+
+.Contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    color: $dark-gray;
+
+    h2 {
+        margin-bottom: 50px;
+    }
+}

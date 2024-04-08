@@ -52,7 +52,8 @@ const Homepage = () => {
 
     <section id="contact" className="Contact-section">
       <h2>Contact Us</h2>
-      <p>Interested in joining our mission or have questions? Contact our president Maximus Powers at maximuspowersdev@gmail.com</p>
+      <p>Interested in joining our mission or have questions? Contact our president Maximus Powers at <a href="mailto:maximuspowersdev@gmail.com"> maximuspowersdev@gmail.com</a>
+      </p>
     </section>
   </>
   );
