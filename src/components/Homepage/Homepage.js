@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles/Homepage.scss';
-import LineDecorations from './LineDecorations';  
-import AnimatedTitle from './animations/AnimatedTitle';
-import FadeInParagraph from './animations/FadeInParagraph';
+import './styles/DottedLines.scss';
+import AnimatedTitle from './components/AnimatedTitle';
+import FadeInParagraph from './components/FadeInParagraph';
 import AZVClogo from '../../assets/AZVC_Transparent.png';
 import GCNlogo from '../../assets/global_career_network.png';
 import chip from '../../assets/chip.png';
@@ -12,16 +12,46 @@ import conectorlines from '../../assets/conector-lines.png';
 const Homepage = () => {
   return (
   <>
-      <header className="hero-section boxed-container">
-        <LineDecorations />
-        <AnimatedTitle text="Ethical Spectacle <br/> Research" />
-        <FadeInParagraph>
-          A melting pot of ethical leaders and techies that write{' '}
-          <span className="pink-highlight">clean</span> code.
-        </FadeInParagraph>
-        <Link to="/hackathons" className="primary-button">
-          Join Our Hackathon
-        </Link>
+      <header className="hero-section inner-container">
+
+        <span className='dotted-line-left-full'>
+            <span className='overlay-left-full'></span>
+        </span>
+
+
+        <div className='fw vp'>
+          <span className='dotted-line-top'>
+            <span className='overlay-top'></span>
+          </span>
+          <AnimatedTitle text="Ethical Spectacle <br/> Research" />
+        </div>
+
+        <div className='fw vp centered-text'>
+          <span className='dotted-line-top'>
+            <span className='overlay-top'></span>
+          </span>
+          <FadeInParagraph>
+            A melting pot of ethical leaders and techies that write{' '}
+            <span className="pink-highlight">clean</span> code.
+          </FadeInParagraph>
+        </div>
+
+        <div className='fw vp centered-text'>
+          <span className='dotted-line-top'>
+            <span className='overlay-top'></span>
+          </span>
+          <Link to="/hackathons" className="primary-button">
+            Join Our Hackathon
+          </Link>
+          <span className='dotted-line-bottom'>
+            <span className='overlay-bottom'></span>
+          </span>
+        </div>
+
+        <span className='dotted-line-right-full'>
+            <span className='overlay-right-full'></span>
+        </span>
+
       </header>
 
     <section id="about" className="about-section">
