@@ -2,6 +2,7 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 import Badges from './Badges/Badges';
 import MiniEvents from './MiniEvents/MiniEvents';
 import Opportunities from './Opportunities/Opportunities';
+import Certificates from './Certificates/Certificates';
 import './MyAccount.css';
 
 function MyAccount({ userEmail }) {
@@ -15,6 +16,7 @@ function MyAccount({ userEmail }) {
         <MiniEvents />
         <Opportunities />
       </div>
+      <Certificates userEmail={userEmail} />
     </div>
   );
 }
