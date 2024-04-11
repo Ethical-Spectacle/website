@@ -1,0 +1,78 @@
+.certificate-container {
+  font-family: 'Times New Roman', Times, serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.certificate-container::before,
+.certificate-container::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.logo {
+  max-width: 200px;
+  margin: 10px 0 0 0;
+}
+
+.certificate-title {
+  font-size: 2em;
+  margin: 0;
+}
+
+.certificate-subtitle {
+  font-size: 1.5em;
+  margin: 10px 0 20px;
+}
+
+.certificate-body p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.certificate-link {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+.certificate-link:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .certificate-container {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .logo {
+    max-width: 150px; /* Reduce logo size for smaller screens */
+    margin-top: 5px; /* Adjust logo margin for smaller screens */
+  }
+
+  .certificate-title {
+    font-size: 1.5em; /* Reduce title font size for smaller screens */
+  }
+
+  .certificate-subtitle {
+    font-size: 1.2em; /* Reduce subtitle font size for smaller screens */
+    margin-bottom: 10px; /* Adjust subtitle margin for smaller screens */
+  }
+
+  .certificate-body p {
+    font-size: 1em; /* Reduce paragraph font size for smaller screens */
+    margin: 8px 0; /* Adjust paragraph margin for smaller screens */
+  }
+}
