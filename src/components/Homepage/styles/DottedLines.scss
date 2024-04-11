@@ -135,3 +135,25 @@
     border-color: rgb(176, 176, 176);
     }
 }
+
+
+
+@media (max-width: 820px) { 
+    .dotted-line-left-full {
+        left: 100px;
+    }
+
+    .dotted-line-right-full {
+        right: 100px;
+    }
+}
+
+@media (max-width: 390px) {
+    .dotted-line-left-full {
+        left: 25px;
+    }
+
+    .dotted-line-right-full {
+        right: 25px;
+    }
+}
