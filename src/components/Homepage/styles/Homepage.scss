@@ -1,7 +1,14 @@
 @import "../../../styles/variables.scss";
 
+.hero-section,
+.about-section,
+.partners,
+.Contact-section {
+  height: 100vh;
+}
+
+
 .hero-section {
-    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
