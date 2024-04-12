@@ -14,7 +14,7 @@ const CertificatesList = ({ userEmail }) => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ 'email': userEmail }), // Use 'userEmail' here
+        body: JSON.stringify({ email: userEmail }), // Use 'userEmail' here
       });
       if (!response.ok) throw new Error('Failed to fetch certificates');
       const data = await response.json();
@@ -28,7 +28,7 @@ const CertificatesList = ({ userEmail }) => {
 
   useEffect(() => {
     fetchCertificates();
-  }, [userEmail]); // Corrected to 'userEmail'
+  }, [userEmail]); 
 
   const claimCertificate = async (id) => {
     try {
@@ -37,11 +37,11 @@ const CertificatesList = ({ userEmail }) => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ certificate_id: id, email: userEmail }) // Use 'userEmail' here
+        body: JSON.stringify({ certificate_id: id, email: userEmail })
       });
       const data = await response.json();
       if (data.success) {
-        fetchCertificates(); // This can now correctly call fetchCertificates
+        fetchCertificates();
       } else {
         alert(data.error);
       }
