@@ -9,6 +9,7 @@ import Hackathons from './components/Hackathons/Hackathons';
 import About from './components/About/About';
 import Account from './components/Account/Account';
 import Leaderboard from './components/Leaderboard/Leaderboard';
+import HthonCertificate from './components/HthonCertificate/HthonCertificate';
 
 const App = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/account" element={<Account />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/hackathon-certificate/:certificateId" element={<HthonCertificate />} />
         </Routes>
         <Footer />
       </div>
