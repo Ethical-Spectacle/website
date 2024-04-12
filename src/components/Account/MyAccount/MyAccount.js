@@ -10,13 +10,13 @@ function MyAccount({ userEmail }) {
     <div className="my-account-container">
       <div className="user-details">
         <ProfileInfo userEmail={userEmail} />
+        <Certificates userEmail={userEmail} />
         <Badges userEmail={userEmail}/>
       </div>
       <div className='events'>
         <MiniEvents />
         <Opportunities />
       </div>
-      <Certificates userEmail={userEmail} />
     </div>
   );
 }
