@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.3345fb32.css",
-    "main.js": "/static/js/main.ea02acbe.js",
+    "main.css": "/static/css/main.fc7d0544.css",
+    "main.js": "/static/js/main.672ce595.js",
     "static/js/453.a958267c.chunk.js": "/static/js/453.a958267c.chunk.js",
     "static/media/anthony-soohoo.png": "/static/media/anthony-soohoo.ed4588141012a04910bb.png",
+    "static/media/chip.png": "/static/media/chip.801cb49ec62a64b6a30b.png",
     "static/media/global_career_network.png": "/static/media/global_career_network.2f50f83dd5178ba02394.png",
     "static/media/euvin-naidoo.png": "/static/media/euvin-naidoo.538c885df4622b6f0dd3.png",
     "static/media/ashok-santhanam.png": "/static/media/ashok-santhanam.de24d4404efbe58ed6a9.png",
@@ -11,14 +12,15 @@
     "static/media/hitendra-chaturvedi.png": "/static/media/hitendra-chaturvedi.7d9f8f090a000c87c767.png",
     "static/media/light_logo_no_bg.png": "/static/media/light_logo_no_bg.fb1eb3436d7f25429f31.png",
     "static/media/AZVC_Transparent.png": "/static/media/AZVC_Transparent.3fc66e86b3970574ea07.png",
+    "static/media/conector-lines.png": "/static/media/conector-lines.0a755baaf71db8b2639e.png",
     "static/media/huggingface.svg": "/static/media/huggingface.52285f1c2e70aa94541f4a9a4c16ab06.svg",
     "index.html": "/index.html",
-    "main.3345fb32.css.map": "/static/css/main.3345fb32.css.map",
-    "main.ea02acbe.js.map": "/static/js/main.ea02acbe.js.map",
+    "main.fc7d0544.css.map": "/static/css/main.fc7d0544.css.map",
+    "main.672ce595.js.map": "/static/js/main.672ce595.js.map",
     "453.a958267c.chunk.js.map": "/static/js/453.a958267c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3345fb32.css",
-    "static/js/main.ea02acbe.js"
+    "static/css/main.fc7d0544.css",
+    "static/js/main.672ce595.js"
   ]
 }
