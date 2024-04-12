@@ -22,7 +22,11 @@ const Nav = ({ isMobileMenuOpen, toggleMobileMenu }) => {
       {isMobileMenuOpen && (
         <div className="Overlay" onClick={toggleMobileMenu}>
           <div className="Menu" onClick={(e) => e.stopPropagation()}>
-            
+
+          <div className="open-menu-icon" onClick={toggleMobileMenu}> 
+                <GrClose />
+          </div>
+
           <NavLink to="/" className={activePath === '/' ? 'activeNavLink' : ''}><h1>Home</h1></NavLink>
           <NavLink to="/hackathons" className={activePath === '/hackathons' ? 'activeNavLink' : ''}><h1>Hackathons</h1></NavLink>
           <NavLink to="/about" className={activePath === '/about' ? 'activeNavLink' : ''}><h1>About Us</h1></NavLink>
@@ -56,7 +60,7 @@ const Nav = ({ isMobileMenuOpen, toggleMobileMenu }) => {
               <a href="https://www.meetup.com/ethical-spectacle-research/events/"><FaMeetup /></a>
               <a href="https://www.linkedin.com/company/ethical-spectacle-research"><FaLinkedinIn /></a>
               <div className="Menu-icon" onClick={toggleMobileMenu} 
-                  style={{ color: isMobileMenuOpen ? '#242424' : '#ff93b1' }}> 
+                  style={{ color: isMobileMenuOpen ? '#FE93B1' : '#ff93b1' }}> 
                 {isMobileMenuOpen ? <GrClose /> : <RiMenu3Line />}
               </div>
             </div>

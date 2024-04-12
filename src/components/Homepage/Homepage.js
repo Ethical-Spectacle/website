@@ -56,12 +56,12 @@ const Homepage = () => {
 
     <section id="about" className="about-section">
       <div className="boxed-container centered-text">
-        <h2>With <span className='white-highlight'>Great Power</span>
-          <br /> comes 
-          <span className='pink-highlight'>Great Responsibility</span>
+        <h2>With <span className='pink-highlight'>Great Power</span>
+          <br /> comes  <span className='dotted-white-highlight'>great responsibility</span>
         </h2>
         <p>The future lies in the hands of developers. Us devs have a responsibility to be careful, without stifling progress. Our mission is to build impactful tech, with the forethought to protect users.</p>
       </div>
+
     </section>
 
     <section id="partners" className="partners">
