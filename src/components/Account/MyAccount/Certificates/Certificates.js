@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+const API_URL_PROD =
+  "https://ethical-spectacle-backend-e4d474b5c453.herokuapp.com";
 
 const CertificatesList = ({ userEmail }) => {
   const [certificates, setCertificates] = useState([]);
@@ -9,7 +11,7 @@ const CertificatesList = ({ userEmail }) => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://127.0.0.1:5000/get_certificates', {
+      const response = await fetch(`${API_URL_PROD}/get_certificates`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

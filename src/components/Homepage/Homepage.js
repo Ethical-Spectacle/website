@@ -7,7 +7,6 @@ import FadeInParagraph from './components/FadeInParagraph';
 import AZVClogo from '../../assets/AZVC_Transparent.png';
 import GCNlogo from '../../assets/global_career_network.png';
 import chip from '../../assets/chip.png';
-import conectorlines from '../../assets/conector-lines.png';
 
 const Homepage = () => {
   return (
