@@ -1,6 +1,7 @@
 import React from 'react';
 import './Hackathons.css';
 import Judges from './Judges/Judges';
+import DecorationGrid from './components/DecorationGrid';
 import ESLogo from '../../assets/dark_logo_no_bg.png';
 import AZVCLogo from '../../assets/AZVC_Transparent.png';
 import { IoCloseSharp } from "react-icons/io5";
@@ -8,6 +9,9 @@ import { IoCloseSharp } from "react-icons/io5";
 const Hackathons = () => {
   return (
     <div className="hackathons">
+      <div className='deco-container'>
+        <DecorationGrid />
+      </div>
       <div className="next-hackathon">
         <h1>First Hackathon!</h1>
 

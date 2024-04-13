@@ -66,7 +66,6 @@ const Homepage = () => {
 
     <section id="partners" className="partners">
       <div className='chip-title'>
-        <img src={conectorlines} alt='decorative-lines' className='deco-lines'></img>
         <img src={chip} alt="chip" className="chip"  />
         <h2>Partners</h2>
       </div>
