@@ -9,9 +9,6 @@ import { IoCloseSharp } from "react-icons/io5";
 const Hackathons = () => {
   return (
     <div className="hackathons">
-      <div className='deco-container'>
-        <DecorationGrid />
-      </div>
       <div className="next-hackathon">
         <h1>First Hackathon!</h1>
 
