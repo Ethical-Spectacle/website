@@ -1,0 +1,234 @@
+@import "../../../styles/variables.scss";
+
+.hero-section,
+.about-section,
+.partners,
+.Contact-section {
+  height: 100vh;
+}
+
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .fw {
+        width: 100%;
+        position: relative;
+    }
+
+    .vp {
+        padding: 25px 0;
+    }
+
+    h1 {
+        font-size: 6rem;
+        font-family: $font-main;
+        margin: 0;
+    }
+
+    p {
+        font-size: 3rem;
+        font-family: $font-secondary;
+    }
+}
+
+.about-section {
+    position: relative;
+    height: 100vh;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+    border-radius: 50px 50px 20px 20px;
+    background-color: $dark-gray;
+    color: white;
+    
+
+    h2 {
+        line-height: 75px;
+        font-weight: 400;
+    }
+
+    p {
+        width: 70%;
+        margin: 0  auto;
+        line-height: 30px;
+        font-size: 2.2rem;
+    }
+
+    .pink-highlight {
+        padding: 2px 7px;
+        margin: 0 10px;
+    }
+
+    .dotted-white-highlight {
+        border: 1px dashed white;
+        padding: 5px 10px;
+    }
+
+    .boxed-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    height: 50vh;
+
+    .chip-title {
+        position: relative;
+        width: 100%;
+        margin: 50px;
+
+        .chip, h2, .deco-lines {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .chip {
+            height: 100px;
+        }
+
+        .deco-lines {
+            top: 110px;
+            width: 550px;
+        }
+
+        h2 {
+            background-image: linear-gradient(to right, white, #a6a6a6);
+            color: black;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent; 
+            display: inline-block; 
+            margin: 0;
+        }
+    }
+
+    .partners-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 50px;
+
+        img {
+            width: 200px;
+            height: auto;
+            margin: 20px;
+        }
+    }
+}
+
+.Contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    color: $dark-gray;
+
+    h2 {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 820px) {
+    .hero-section {
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .about-section {
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .partners {
+        .chip-title {
+            .chip {
+                height: 50px;
+            }
+
+            .deco-lines {
+                width: 300px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .partners-logos {
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+    .Contact-section {
+        h2 {
+            font-size: 2rem;
+        }
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .partners {
+        width: 100%;
+        overflow: hidden;
+        flex-wrap: nowrap;
+    }
+
+    .about-section {
+        p {
+            font-size: 2rem;
+        }
+    }
+
+    .Contact-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .hero-section {
+
+        height: 70vh;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}

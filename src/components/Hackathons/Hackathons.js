@@ -1,6 +1,7 @@
 import React from 'react';
 import './Hackathons.css';
 import Judges from './Judges/Judges';
+import DecorationGrid from './components/DecorationGrid';
 import ESLogo from '../../assets/dark_logo_no_bg.png';
 import AZVCLogo from '../../assets/AZVC_Transparent.png';
 import { IoCloseSharp } from "react-icons/io5";

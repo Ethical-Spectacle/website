@@ -52,11 +52,14 @@
 }
 
 @media (max-width: 768px) {
-    .my-account-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        height: auto; 
-        padding: 0px 25px;
+    .my-account-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .user-details, .events {
+        width: 100%;
+        margin-top: 50px;
     }
 }
   

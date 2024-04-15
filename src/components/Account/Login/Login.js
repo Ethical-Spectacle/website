@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Login.css"; // Import CSS file
+import "./Login.scss"; // Import CSS file
 const API_URL_PROD =
   "https://ethical-spectacle-backend-e4d474b5c453.herokuapp.com";
 
@@ -36,7 +36,7 @@ const Login = ({ handleAuthentication }) => {
   };
 
   return (
-    <div className="login-container">
+    <div className="login-section">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-group">

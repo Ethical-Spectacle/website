@@ -47,6 +47,7 @@ const MintHthonCertificate = ({ apiUrl }) => {
       }
     } catch (error) {
       setMessage("Error: " + error.message);
+      console.log("Error minting certificate:", error);
     }
   };
 

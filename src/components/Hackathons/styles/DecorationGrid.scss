@@ -1,0 +1,18 @@
+.deco-container {
+    position: absolute;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 100vw; /* Adjust this if you want to limit the width of the grid */
+    height: 100vh; /* Adjust this if you want to limit the height of the grid */
+    border: 1px solid #ccc; /* Adjust the border color as per your preference */
+
+    .grid-item {
+        border: 1px solid #ccc; /* Adjust the border color as per your preference */
+        background-color: transparent; /* Change this if you want a different background color for the grid items */
+        box-sizing: border-box;
+    }
+}

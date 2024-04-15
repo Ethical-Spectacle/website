@@ -3,7 +3,7 @@ import AddPoints from "./AddPoints/AddPoints";
 import MintHthonCertificate from "./MintHthonCertificate/MintHthonCertificate";
 import './Admin.css';
 
-const API_URL_PROD = "http://127.0.0.1:5000";
+const API_URL_PROD = "https://ethical-spectacle-backend-e4d474b5c453.herokuapp.com";
 
 const Admin = () => {
   return (
