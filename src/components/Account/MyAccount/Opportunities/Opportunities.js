@@ -1,5 +1,5 @@
 import React from 'react';
-import './Opportunities.css'; // Assuming this import brings in the necessary CSS
+import './Opportunities.css';
 
 function Opportunities() {
   return (
