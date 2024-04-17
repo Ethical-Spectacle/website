@@ -80,7 +80,7 @@ const Homepage = () => {
 
     <section id="contact" className="Contact-section">
       <h2>Contact Us</h2>
-      <p>Interested in joining our mission or have questions? Contact our president Maximus Powers at <a href="mailto:maximuspowersdev@gmail.com"> maximuspowersdev@gmail.com</a>
+      <p>Interested in joining our mission or have questions? Contact our president Maximus Powers at <a href="mailto:maximus@ethicalspectacle.com"> maximus@ethicalspectacle.com</a>
       </p>
     </section>
   </>
