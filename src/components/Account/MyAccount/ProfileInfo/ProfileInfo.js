@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaGlobe, FaGithub, FaLinkedin } from "react-icons/fa";
 const API_URL_PROD =
-  "https://ethical-spectacle-backend-e4d474b5c453.herokuapp.com";
+  "https://api.ethicalspectacle.com/";
 
 const ProfileInfo = ({ userEmail }) => {
   const [profile, setProfile] = useState(null);

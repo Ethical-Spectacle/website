@@ -2,18 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { FaGlobe, FaGithub, FaLinkedin } from 'react-icons/fa';
 import './Leaderboard.css';
 import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css'; // Import stylesheet
+import 'tippy.js/dist/tippy.css'; 
 import './Leaderboard.css';
+
+
 
 const Leaderboard = () => {
   const [rankings, setRankings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const API_URL_PROD =
+  "https://api.ethicalspectacle.com/";
+  // "http://127.0.0.1:5000";
 
   useEffect(() => {
     const fetchRankings = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/get_rankings');
+        const response = await fetch(`${API_URL_PROD}/get_rankings`);
         if (!response.ok) {
           throw new Error('Failed to fetch rankings');
         }

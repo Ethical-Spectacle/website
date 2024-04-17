@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Signup.css"; // Import CSS file
 
 const API_URL_PROD =
-  "https://ethical-spectacle-backend-e4d474b5c453.herokuapp.com";
+  "https://api.ethicalspectacle.com/";
 
 const Signup = ({ handleAuthentication }) => {
   const [formData, setFormData] = useState({
