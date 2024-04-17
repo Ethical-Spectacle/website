@@ -16,7 +16,7 @@ const CertificatesList = ({ userEmail }) => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email: userEmail }), // Use 'userEmail' here
+        body: JSON.stringify({ email: userEmail }), 
       });
       if (!response.ok) throw new Error('Failed to fetch certificates');
       const data = await response.json();
@@ -34,7 +34,7 @@ const CertificatesList = ({ userEmail }) => {
 
   const claimCertificate = async (id) => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/claim_hackathon_certificate', {
+      const response = await fetch(`${API_URL_PROD}/claim_hackathon_certificate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
