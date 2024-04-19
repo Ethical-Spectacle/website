@@ -14,7 +14,7 @@ const HthonCertificate = () => {
   const { certificateId } = useParams();
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/hackathon_certificate/${certificateId}`)
+    fetch(`http://api.ethicalspectacle.com/hackathon_certificate/${certificateId}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
