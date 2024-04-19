@@ -65,6 +65,9 @@
 }
 
 @media (min-width: 768px) {
+    .my-account-container {
+        padding: 0 50px;
+    }
     .user-details {
         align-items: flex-start;
     }
