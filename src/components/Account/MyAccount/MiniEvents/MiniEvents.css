@@ -1,15 +1,17 @@
 .events-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
-    height: 400px; /* Adjust height as needed */
+    height: auto; /* Adjust height as needed */
     overflow-y: auto;
-    padding-right: 2px;
+    padding: 20px;
     margin-bottom: 10px;
 }
 
 .events-container h2 {
-    font-size: 24px;
+    font-size: 3rem;
+    text-align: center;
     margin: 0;
     padding: 0;
     text-align: left;
@@ -18,8 +20,8 @@
 .events-container p {
     padding: 0;
     margin: 0 0 10px 0;
-    font-size: 14px;
-    text-align: left;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .event {
@@ -39,8 +41,12 @@
     width: 100%; /* Ensure the container takes full width */
 }
 
+.event-name {
+    color: #e17595;
+}
+
 .event-name, .event-date {
-    font-size: 14px;
+    font-size: 2rem;
     margin-right: 10px; /* Provides spacing between name, date */
 }
 
@@ -52,8 +58,8 @@
 .event-description {
     margin-top: 20px;
     color: #686868; /* Lighter color for the description */
-    font-size: 15px; /* Smaller font size for the description */
-    margin-top: 5px; /* Space between the info line and the description */
+    font-size: 1.9rem; /* Smaller font size for the description */
+    margin-top: 15px; /* Space between the info line and the description */
     display: flex; /* Use flexbox for alignment */
     justify-content: space-between; /* Space between description and link */
     align-items: center; /* Align items vertically */

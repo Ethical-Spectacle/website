@@ -1,9 +1,21 @@
 .opportunities-container {
+  margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: scroll;
     padding-bottom: 150px;
+  }
+
+  .opportunities-container h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .opportunities-container p {
+    text-align: center;
   }
   
   .opportunities-grid {

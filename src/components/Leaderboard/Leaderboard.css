@@ -47,7 +47,6 @@
   .link-container {
     display: flex; /* Adjusted to flex to ensure inline display of links and badges */
     align-items: center; /* Center items vertically */
-    justify-content: flex-end; /* Align items to the right */
     gap: 10px; /* Space between links and badges */
     width: 25%; /* Adjust width as needed */
   }

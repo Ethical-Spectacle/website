@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Certificates from './Certificates.css'
 const API_URL_PROD =
   "https://api.ethicalspectacle.com/";
 

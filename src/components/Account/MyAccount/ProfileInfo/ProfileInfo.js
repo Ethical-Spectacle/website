@@ -144,7 +144,7 @@ const ProfileInfo = ({ userEmail }) => {
             <div className="details-container">
               <p>Member #{profile.id}</p>
               <p>
-                <strong>Bio:</strong> {profile.bio}
+                <strong>Bio:</strong> {profile.bio ? profile.bio : "No bio"}
               </p>
               <div className="link-container">
                 {profile.website && (

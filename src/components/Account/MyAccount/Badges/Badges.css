@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    height: 400px;
+    height: auto;
     overflow-y: auto; /* Enables vertical scrolling within the container */
     padding-right: 2px; 
     margin-bottom: 10px; 
@@ -25,6 +25,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between; 
+    font-size: 1.2rem;
+}
+
+.badge span {
+    font-size: 2rem;
 }
 
 .badge-emoji {
