@@ -63,6 +63,12 @@
         margin-top: 50px;
     }
 }
+
+@media (min-width: 768px) {
+    .user-details {
+        align-items: flex-start;
+    }
+}
   
 .profile-info, .badges, .mini-events, .opportunities {
     display: flex;
