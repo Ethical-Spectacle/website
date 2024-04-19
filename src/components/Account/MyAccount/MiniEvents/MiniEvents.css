@@ -88,3 +88,9 @@
 .event-date {
     color: #686868; /* Lighter color for the date */
 }
+
+@media (min-width: 768px) {
+    .events-container {
+        height: 400px;
+    }
+}
